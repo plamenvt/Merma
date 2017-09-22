@@ -1,7 +1,20 @@
 doctype html
 html
   head
-    title= title
+    title Merma
+    script(src='/node_modules/jquery/dist/jquery.js')
+    script(src='/node_modules/tether/dist/js/tether.js')
+    script(src='/node_modules/bootstrap/dist/js/bootstrap.js')
+    script(src='/node_modules/navigo/lib/navigo.min.js')
+    link(rel='stylesheet', href='/node_modules/bootstrap/dist/css/bootstrap.css')
+    link(rel='stylesheet', href='/node_modules/bootstrap/dist/css/bootstrap-reboot.css')
     link(rel='stylesheet', href='/public/stylesheets/style.css')
   body
-    block content
+    div#root
+      header.container
+        div.row
+          h1.page-header.col-md-6
+            |Merma
+      div#content.container      
+        block content
+      div.footer  

@@ -1,90 +1,39 @@
-#!/usr/bin/env node
+/* globals __dirname */
 
-/**
- * Module dependencies.
- */
+const express = require("express");
+const path = require("path");
+const morgan = require("morgan");
+const cookieParser = require("cookie-parser");
+const bodyParser = require("body-parser");
 
-var app = require('./app/app');
-var debug = require('debug')('merma:server');
-var http = require('http');
 
-/**
- * Get port from environment and store in Express.
- */
+const app = require("./app/app").application();
+const { port } = require("./app/config");
+// const data = require("./data");
 
-var port = normalizePort(process.env.PORT || '3001');
-app.set('port', port);
+app.set('views', path.join(__dirname, './views'));
+app.set('view engine', 'pug');
 
-/**
- * Create HTTP server.
- */
+app.use(morgan("combined"));
 
-var server = http.createServer(app);
+const libsPath = path.join(__dirname, '../node_modules');
+app.use('/node_modules', express.static(libsPath));
+const staticPath = path.join(__dirname, './public');
+app.use('/public', express.static(staticPath));
 
-/**
- * Listen on provided port, on all network interfaces.
- */
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
-server.listen(port);
-server.on('error', onError);
-server.on('listening', onListening);
+// require("./app/auth")(app, data);
 
-/**
- * Normalize a port into a number, string, or false.
- */
+app.get("/api/ping", (req, res) => res.send(true));
 
-function normalizePort(val) {
-  var port = parseInt(val, 10);
+app.get("/", (req, res) => res.render("home"));
 
-  if (isNaN(port)) {
-    // named pipe
-    return val;
-  }
+// app.use("/api/questions", require("./app/routers/books.router")(data));
+// app.use("/api/auth", require("./app/routers/auth.router")(data));
 
-  if (port >= 0) {
-    // port number
-    return port;
-  }
-
-  return false;
-}
-
-/**
- * Event listener for HTTP server "error" event.
- */
-
-function onError(error) {
-  if (error.syscall !== 'listen') {
-    throw error;
-  }
-
-  var bind = typeof port === 'string'
-    ? 'Pipe ' + port
-    : 'Port ' + port;
-
-  // handle specific listen errors with friendly messages
-  switch (error.code) {
-    case 'EACCES':
-      console.error(bind + ' requires elevated privileges');
-      process.exit(1);
-      break;
-    case 'EADDRINUSE':
-      console.error(bind + ' is already in use');
-      process.exit(1);
-      break;
-    default:
-      throw error;
-  }
-}
-
-/**
- * Event listener for HTTP server "listening" event.
- */
-
-function onListening() {
-  var addr = server.address();
-  var bind = typeof addr === 'string'
-    ? 'pipe ' + addr
-    : 'port ' + addr.port;
-  debug('Listening on ' + bind);
-}
+const server = app.listen(port, () => {
+  const address = server.address().address;
+  console.log(`App started at ${address}:${port}`);
+});
