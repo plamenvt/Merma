@@ -1,0 +1,32 @@
+extends layout
+
+block content
+  div
+    |Shrinkage Evaluetion
+  div
+    |Responses:
+  table
+    tr
+        th  
+            |ID
+        th
+            |Name
+        th
+            |Q1
+        th
+            |Q2
+        th
+            |Q3
+    tr
+        td  
+            #{people.id}
+        td
+            #{people.name}
+        td
+            #{people.q1}
+        td
+            #{people.q2}
+        td
+            #{people.q3}         
+  button
+    |Next

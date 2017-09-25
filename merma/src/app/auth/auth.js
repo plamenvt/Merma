@@ -1,45 +1,53 @@
-const passport = require("passport");
-const Strategy = require("passport-http-bearer").Strategy;
+const session = require('express-session');
+const passport = require('passport');
+const { Strategy } = require('passport-local');
 
-const cookieParser = require("cookie-parser");
-const bodyParser = require("body-parser");
-const session = require("express-session");
+const MongoStore = require('connect-mongo')(session);
 
-module.exports = (app, data) => {
-    app.use(cookieParser());
-    app.use(bodyParser.json());
-    app.use(bodyParser.urlencoded({ extended: true }));
+const config = require('../config')
+
+const applyTo = (app, data) => {
+    passport.use(new Strategy((username, password, done) => {
+        data.users.checkPassword(username, password)
+            .then(() => {
+                return data.users.findByUsername(username);
+            })
+            .then((user) => {
+                done(null, user);
+            })
+            .catch((err) => {
+                done(err);
+            });
+    }));
 
     app.use(session({
-        secret: "Purple Unicorn",
+        store: new MongoStore({ url: config.connectionString }),
+        secret: config.sessionSecret,
         resave: true,
         saveUninitialized: true,
-        cookie: { maxAge: 1000 * 60 }
     }));
 
     app.use(passport.initialize());
     app.use(passport.session());
 
-    passport.use(new Strategy((token, done) => {
-        data.users.findByToken(token)
-            .then((user) => {
-                if (!user) {
-                    return done(null, false);
-                }
-
-                return done(null, user, {
-                    scope: "all"
-                });
-            });
-    }));
-
     passport.serializeUser((user, done) => {
-        done(null, user.id);
+        done(null, user._id);
     });
 
-    passport.deserializeUser((token, done) => {
-        return data.users.findByToken(token)
-            .then((user) => done(null, user))
-            .catch((err) => done(err));
+    passport.deserializeUser((id, done) => {
+        data.users.findById(id)
+            .then((user) => {
+                done(null, user);
+            }).catch(done);
+    });
+
+    app.use((req, res, next) => {
+        res.locals = {
+            user: req.user,
+        };
+
+        next();
     });
 };
+
+module.exports = { applyTo };

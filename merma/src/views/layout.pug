@@ -10,11 +10,13 @@ html
     link(rel='stylesheet', href='/node_modules/bootstrap/dist/css/bootstrap-reboot.css')
     link(rel='stylesheet', href='/public/stylesheets/style.css')
   body
-    div#root
-      header.container
-        div.row
-          h1.page-header.col-md-6
-            |Merma
-      div#content.container      
-        block content
-      div.footer  
+    nav.navbar.fixed-top
+      div.navbar-collapse
+        a.navbar-brand
+          |Merma Quiz
+        button.btn
+          |Log in
+    div#content.container      
+      block content
+    div.footer.fixed-bottom
+      |Powered by Plamen Todorov

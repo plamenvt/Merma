@@ -1,3 +1,7 @@
+const port = 3001;
+const connectionString = 'mongodb://localhost/merma';
+const sessionSecret = 'Purple Unicorn';
+
 module.exports = {
-    port: 3001
+    port, connectionString, sessionSecret
 };
