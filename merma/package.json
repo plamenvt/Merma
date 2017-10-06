@@ -21,12 +21,12 @@
     "lodash": "^4.17.4",
     "lowdb": "^1.0.0",
     "morgan": "^1.8.2",
-    "navigo": "^5.3.1",
     "nodemon": "^1.12.1",
     "passport": "^0.4.0",
     "passport-http-bearer": "^1.0.1",
     "passport-local": "^1.0.0",
     "pug": "~2.0.0-beta11",
+    "sammy": "^0.7.6",
     "serve-favicon": "~2.4.2",
     "tether": "^1.4.0"
   },

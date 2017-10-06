@@ -5,7 +5,7 @@ html
     script(src='/node_modules/jquery/dist/jquery.js')
     script(src='/node_modules/tether/dist/js/tether.js')
     script(src='/node_modules/bootstrap/dist/js/bootstrap.js')
-    script(src='/node_modules/navigo/lib/navigo.min.js')
+    script(src='/node_modules/sammy/lib/sammy.js')
     link(rel='stylesheet', href='/node_modules/bootstrap/dist/css/bootstrap.css')
     link(rel='stylesheet', href='/node_modules/bootstrap/dist/css/bootstrap-reboot.css')
     link(rel='stylesheet', href='/public/stylesheets/style.css')
@@ -17,10 +17,15 @@ html
             |Merma Quiz
           button.btn
             |Log in
-      .content.container      
-        #page-placeholder
+      #content.container
       div.footer.fixed-bottom
         |Powered by Plamen Todorov
     
-    script(src='/public/pages/home/home.js')
-    script(src='/public/javascripts/http.js')   
+    script(src='/node_modules/handlebars/dist/handlebars.js')
+    script(src='/public/app.js')
+
+    script(src='/public/javascripts/templates.js')
+    script(src='/public/javascripts/json-requester.js')
+
+    script(src='/public/controllers/homeController.js')  
+    script(src='/public/controllers/usersController.js') 
