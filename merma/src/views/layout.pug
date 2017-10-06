@@ -10,13 +10,17 @@ html
     link(rel='stylesheet', href='/node_modules/bootstrap/dist/css/bootstrap-reboot.css')
     link(rel='stylesheet', href='/public/stylesheets/style.css')
   body
-    nav.navbar.fixed-top
-      div.navbar-collapse
-        a.navbar-brand
-          |Merma Quiz
-        button.btn
-          |Log in
-    div#content.container      
-      block content
-    div.footer.fixed-bottom
-      |Powered by Plamen Todorov
+    .container
+      nav.navbar.fixed-top
+        div.navbar-collapse
+          a.navbar-brand
+            |Merma Quiz
+          button.btn
+            |Log in
+      .content.container      
+        #page-placeholder
+      div.footer.fixed-bottom
+        |Powered by Plamen Todorov
+    
+    script(src='/public/pages/home/home.js')
+    script(src='/public/javascripts/http.js')   
