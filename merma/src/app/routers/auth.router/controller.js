@@ -19,6 +19,7 @@ const init = (data) => {
                     if (req.body.rememberme !== 'rememberme') {
                         req.session.cookie.expires = false;
                     }
+                    console.log('server login');
                     
                     return res.sendStatus(200)
                 });

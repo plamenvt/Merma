@@ -16,11 +16,11 @@ html
           a.navbar-brand
             |Merma Quiz
           if user  
-            a.btn.btn-sm.btn-secondary(href="#/profile") 
+            a.btn.btn-sm.btn-secondary(href="#/login") 
               |#{users.username}
             button.btn.btn-sm.btn-secondary#btn-sign-out
           else
-            a.btn.btn-sm.btn-secondary(href="#/profile")
+            a.btn.btn-sm.btn-secondary(href="#/login")
               |Log in  
       #content
       div.footer.fixed-bottom
@@ -34,5 +34,5 @@ html
     script(src='/public/javascripts/json-requester.js')
 
     script(src='/public/controllers/homeController.js') 
-    script(src='/public/controllers/profileController.js')  
+    script(src='/public/controllers/loginController.js')  
     script(src='/public/controllers/usersController.js') 

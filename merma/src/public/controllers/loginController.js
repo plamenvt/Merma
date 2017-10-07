@@ -1,7 +1,7 @@
 const profileController = function() {
     
     function all(context) {
-    templates.get('profile')
+    templates.get('login')
         .then(function(template) {
             context.$element().html(template());
         });

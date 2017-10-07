@@ -21,7 +21,25 @@ const data = (function() {
           };
         });
     }
-  
+    
+    function logIn(user) {
+      var reqUser = {
+        username: user.username,
+        password: user.password
+      };
+
+      var options = {
+        data: reqUser
+      };
+
+      return jsonRequester.post('login', options)
+      .then(function(resp) {
+        var user = resp.result;
+        localStorage.setItem(LOCAL_STORAGE_USERNAME_KEY, user.username);
+        localStorage.setItem(LOCAL_STORAGE_AUTHKEY_KEY, user.authKey);
+        return user;
+      });
+    }
   
     function signIn(user) {
       var reqUser = {

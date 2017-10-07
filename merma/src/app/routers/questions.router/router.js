@@ -4,5 +4,8 @@ module.exports = (data) => {
     const router = new express.Router();
     const controller = require('./controller').init(data);
 
+    router
+    .get('/questions', controller.getAllQuestions)
+
     return router;
 };
