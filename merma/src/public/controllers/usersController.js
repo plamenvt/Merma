@@ -6,13 +6,6 @@ const usersController = function() {
           .then(function(resUsers) {
             users = resUsers;
             return templates.get('users');
-          })
-          .then(function(template) {
-            context.$element().html(template(users));
-            $('.btn-add-friend').on('click', function() {
-              var id = $(this).parents('.user-box').attr('data-id');
-              data.friends.sentRequest(id);
-            });
           });
       }
     

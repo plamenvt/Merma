@@ -9,7 +9,7 @@ const templates = function() {
           resolve(cache[name]);
           return;
         }
-        var url = `public/pages/${name}/${name}.html`;
+        var url = `public/pages/${name}.handlebars`;
         $.get(url, function(html) {
           var template = handlebars.compile(html);
           cache[name] = template;

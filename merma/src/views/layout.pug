@@ -15,17 +15,24 @@ html
         div.navbar-collapse
           a.navbar-brand
             |Merma Quiz
-          button.btn
-            |Log in
-      #content.container
+          if user  
+            a.btn.btn-sm.btn-secondary(href="#/profile") 
+              |#{users.username}
+            button.btn.btn-sm.btn-secondary#btn-sign-out
+          else
+            a.btn.btn-sm.btn-secondary(href="#/profile")
+              |Log in  
+      #content
       div.footer.fixed-bottom
         |Powered by Plamen Todorov
     
     script(src='/node_modules/handlebars/dist/handlebars.js')
     script(src='/public/app.js')
 
+    script(src='/public/javascripts/data.js')
     script(src='/public/javascripts/templates.js')
     script(src='/public/javascripts/json-requester.js')
 
-    script(src='/public/controllers/homeController.js')  
+    script(src='/public/controllers/homeController.js') 
+    script(src='/public/controllers/profileController.js')  
     script(src='/public/controllers/usersController.js') 
