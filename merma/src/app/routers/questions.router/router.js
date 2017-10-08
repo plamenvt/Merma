@@ -5,7 +5,7 @@ module.exports = (data) => {
     const controller = require('./controller').init(data);
 
     router
-    .get('/questions', controller.getAllQuestions)
+    .get('/', controller.getAllQuestions)
 
     return router;
 };

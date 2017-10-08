@@ -20,8 +20,8 @@ html {
 #content {
   padding: 0;
   margin: 0;
-  padding-top: 10%;
-  padding-bottom: 20%;
+  padding-top: 8%;
+  padding-bottom: 8%;
 }
 
 .container {
@@ -50,8 +50,18 @@ nav .btn {
   color: white;
 }
 
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a:visited {
+  color: white;
+  text-decoration: none;
+}
+
 .title {
-  padding-bottom: 5%;
+  padding-bottom: 2%;
   text-align: center;
 }
 
@@ -66,4 +76,8 @@ nav .btn {
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
   color: white !important;
   text-align: center !important;
+}
+
+#btn-log-out {
+  display: none;
 }

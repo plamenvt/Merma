@@ -5,7 +5,7 @@ module.exports = (data) => {
     const controller = require('./controller').init(data);
 
     router
-    .get('/profile', controller.getUserProfile);
+    .get('/', controller.getUserProfile);
 
 
     return router;

@@ -1,7 +1,10 @@
 const init = (data) => {
     const controller = {
         getAllQuestions(req, res) {
-            return data.questions.getAll()
+                data.questions.getAll().then((result)=>{
+                res.status(200);
+                return res.json(result);
+            });
         },
     };
 

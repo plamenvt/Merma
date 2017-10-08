@@ -17,7 +17,6 @@ class BaseMongoDbData {
         return this.collection.find()
             .toArray()
             .then((models) => {
-
                 return models;
             });
     }

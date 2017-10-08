@@ -13,13 +13,10 @@ html
     .container
       nav.navbar.fixed-top
         div.navbar-collapse
-          a.navbar-brand
+          a.navbar-brand(href="/")
             |Merma Quiz
-          if user  
-            a.btn.btn-sm.btn-secondary(href="#/login") 
-              |#{users.username}
-            button.btn.btn-sm.btn-secondary#btn-sign-out
-          else
+            a.btn.btn-sm.btn-secondary#btn-log-out(href="api/logout")
+              |Log out  
             a.btn.btn-sm.btn-secondary(href="#/login")
               |Log in  
       #content
@@ -29,7 +26,6 @@ html
     script(src='/node_modules/handlebars/dist/handlebars.js')
     script(src='/public/app.js')
 
-    script(src='/public/javascripts/data.js')
     script(src='/public/javascripts/templates.js')
     script(src='/public/javascripts/json-requester.js')
 

@@ -12,8 +12,7 @@ $(() => {
 
     $(function() {
         sammyApp.run();
-
-        console.log('app.js');
+        //$('#btn-log-out').show();
         // if (data.users.hasUser()) {
         //   $('#container-sign-in').addClass('hidden');
         //   $('#btn-sign-out').on('click', function(e) {

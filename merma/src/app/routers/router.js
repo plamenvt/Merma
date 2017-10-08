@@ -3,9 +3,9 @@ const attachTo = (app, data) => {
     const users = require('./users.router')(data);
     const questions = require('./questions.router')(data);
 
-    app.use('/', auth);
-    app.use('/users', users);
-    app.use('/questions', questions);
+    app.use('/api/', auth);
+    app.use('/api/users', users);
+    app.use('/api/questions', questions);
 };
 
 module.exports = { attachTo };
