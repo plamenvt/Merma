@@ -1,13 +1,18 @@
 <h2 class="title">All responses</h2>
-<table class="col-10 offset-1" id="responses-table">
+<table class="table table-bordered table-sm offset-1" id="responses-table">
     {{#each this}}
     <thead>
-        <tr>
+        <tr class="table-active">
             <th>{{userId}} {{name}}</th>
         </tr>
     </thead>
     <tbody>
         {{#each answers}}
+        <tr>
+            <td> - {{this}}</td>
+        </tr>
+        {{/each}}
+        {{#each isTrue}}
         <tr>
             <td> - {{this}}</td>
         </tr>

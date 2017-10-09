@@ -8,9 +8,27 @@ const init = (data) => {
         },
         addResponse(req, res) {
             const response = req.body;
+            var corAnswersRes = req.body.correct_answers;
+            var chechedAnswers = [];
+            var answersRes = req.body.answers;
+            function correctRes(corRes, answersRes) {
+                var isTrue = [];
+                for (var i = 0; i < answersRes.length; i++) {
+                    if (corRes[i] === answersRes[i]) {
+                        isTrue[i] = true;
+                    }
+                    else
+                    {
+                        isTrue[i] = false;
+                    }
+                }
+                return isTrue;
+            }
+            chechedAnswers = correctRes(corAnswersRes, answersRes);
             data.responses.create({
                 userId: req.body.id,
                 name: req.body.name,
+                isTrue: chechedAnswers,
                 answers: req.body.answers,
                 dateCreated: new Date(),
                 })
