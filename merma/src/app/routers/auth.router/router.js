@@ -7,13 +7,10 @@ module.exports = (data) => {
 
     router.post('/login', 
         passport.authenticate('local', {
-         successRedirect: '/',
+         successRedirect: '/#/profile',
          failureRedirect: '/login',
          failureFlash: true,
-        }),
-        function(req, res) {
-            console.log(res.body);
-        }
+        })
     );
     
     router.get('/logout', (req, res) => {
