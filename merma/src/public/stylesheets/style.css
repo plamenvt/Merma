@@ -65,12 +65,12 @@ nav a:visited {
   text-align: center;
 }
 
-.form-group {
+form h3 {
   text-align: center;
 }
 
 .form-group div{
-  padding: 15px;
+  padding: 5px;
 }
 
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
@@ -80,4 +80,29 @@ nav a:visited {
 
 #btn-log-out {
   display: none;
+}
+
+#questions {
+  display: none;
+}
+
+#addQuestionTitle {
+  display: none;
+}
+
+#addQuestionsForm {
+  display: none;
+  margin-top: 5%;
+}
+
+.hidden {
+  display: none;
+}
+
+#questions-table {
+  margin-top: 5%;
+}
+
+#responses-table {
+  margin-top: 5%;
 }

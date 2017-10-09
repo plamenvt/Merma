@@ -21,10 +21,21 @@ class BaseMongoDbData {
             });
     }
 
+    getCollectionCount() {
+        return this.collection.count();
+    }
+
     create(model) {
+        // if (!this._isModelValid(model)) {
+        //     return Promise.reject('Invalid model');
+        // }
+
         return this.collection.insert(model)
             .then(() => {
-                return model;
+                return this.ModelClass.toViewModel(model);
+            })
+            .catch(function(err) {
+                throw err;
             });
     }
 

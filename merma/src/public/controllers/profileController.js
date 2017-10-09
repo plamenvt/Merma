@@ -1,7 +1,7 @@
-const loginController = function() {
+const profileController = function() {
     
     function all(context) {
-    templates.get('login')
+    templates.get('profile')
         .then(function(template) {
             context.$element().html(template());
         });

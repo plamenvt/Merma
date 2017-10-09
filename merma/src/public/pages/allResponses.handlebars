@@ -1,0 +1,17 @@
+<h2 class="title">All responses</h2>
+<table class="col-10 offset-1" id="responses-table">
+    {{#each this}}
+    <thead>
+        <tr>
+            <th>{{userId}} {{name}}</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each answers}}
+        <tr>
+            <td> - {{this}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+    {{/each}}
+</table>
