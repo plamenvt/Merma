@@ -10,7 +10,10 @@ module.exports = (data) => {
          successRedirect: '/',
          failureRedirect: '/login',
          failureFlash: true,
-        })
+        }),
+        function(req, res) {
+            console.log(res.body);
+        }
     );
     
     router.get('/logout', (req, res) => {

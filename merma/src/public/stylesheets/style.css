@@ -34,7 +34,7 @@ html {
 .footer {
   padding: 1%;
   text-align: right;
-  font-size: 80%;
+  font-size: 60%;
 }
 
 nav .btn {
@@ -78,9 +78,9 @@ form h3 {
   text-align: center !important;
 }
 
-#btn-log-out {
+/* #btn-log-out {
   display: none;
-}
+} */
 
 #questions {
   display: none;
@@ -109,4 +109,12 @@ form h3 {
 
 .table-bordered {
   width: 80%;
+}
+
+#responses-table tr td:nth-child(1){
+  width:30%;
+}
+
+nav a {
+  margin: 2px;
 }

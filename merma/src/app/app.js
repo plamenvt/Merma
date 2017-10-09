@@ -1,6 +1,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
+const helpers = require('handlebars-helpers')();
+
 
 const init = (data) => {
     const app = express();

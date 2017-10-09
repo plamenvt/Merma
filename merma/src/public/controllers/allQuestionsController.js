@@ -5,7 +5,6 @@ const allQuestionsController = (function() {
         jsonRequester.get('api/questions')
         .then(function(resQuestions) {
             questions = resQuestions;
-            console.log(questions)
     
             return templates.get('allQuestions');
           })

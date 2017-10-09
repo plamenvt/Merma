@@ -18,7 +18,6 @@ const homeController = function() {
                         
             var shuffledQuestionArray = shuffle(resQuestions);
             questions = shuffledQuestionArray.slice(0,3);
-            console.log(questions);
 
             return templates.get('home');
           })
