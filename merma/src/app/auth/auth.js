@@ -14,7 +14,7 @@ const applyTo = (app, data) => {
         usernameField: 'username',
         passwordField: 'password',
     },
-    (username, password, done) => {
+    async(username, password, done) => {
         data.users.checkPassword(username, password)
             // .then(() => {
             //     return data.users.findByUsername(username);

@@ -1,4 +1,4 @@
-<h2 class="title">Shrinkage Evaluetion</h2>
+<h2 class="title">Shrinkage Evaluation</h2>
 {{#if user}}
 <h2 class="title">User</h2>
 {{/if}}
@@ -33,7 +33,48 @@
         </div>
         {{/each}} 
         <div class="offset-1">
-            <button type="submit" class="btn btn-secondary" id="submit-form">Submit</button>
+            <button onClick="insertResponse()" class="btn btn-secondary" id="submit-form">Submit</button>
         </div>
     </div>
 </form>
+
+{{!-- <script>
+    function insertResponse() {
+        var userId = $("#id").val();
+        var name = $("#name").val();
+        var answers = $("#answers").val();
+        var corAnswersRes = $("#correct_answers").val();
+
+        var chechedAnswers = [];
+        function correctRes(corRes, answersRes) {
+            var isTrue = [];
+            for (var i = 0; i < answersRes.length; i++) {
+                if (corRes[i] === answersRes[i]) {
+                    isTrue[i] = true;
+                }
+                else
+                {
+                    isTrue[i] = false;
+                }
+            }
+            return isTrue;
+        }
+        chechedAnswers = correctRes(corAnswersRes, answers);
+
+        jsonRequester.post('api/questions', {
+            data: {
+                userId: username,
+                name: password,
+                isTrue: chechedAnswers,
+                answers: answers,
+                dateCreated: new Date()
+            }
+        })
+            .then(result => {
+                window.location.hash = '#/thanks';
+            })
+            .catch(err => {
+                console.log(err);
+            });
+    }
+</script> --}}

@@ -21,22 +21,46 @@
     <div class="form-group" id="user-info">
         <h3>Please, fill title and three answers:</h3>
         <div class="col-10 offset-1"> 
-            <input type="text" name="title" class="form-control" placeholder="Title">
+            <input type="text" name="title" class="form-control" id="tb-tatle" placeholder="Title">
         </div>
         <div class="col-10 offset-1">
-            <input type="text" name="answer" class="form-control" placeholder="Answer one">
+            <input type="text" name="answer" class="form-control" id="tb-answer1" placeholder="Answer one">
         </div>
         <div class="col-10 offset-1">
-            <input type="text" name="answer" class="form-control" placeholder="Answer two">
+            <input type="text" name="answer" class="form-control" id="tb-answer2" placeholder="Answer two">
         </div>
         <div class="col-10 offset-1">
-            <input type="text" name="answer" class="form-control" placeholder="Answer trhee">
+            <input type="text" name="answer" class="form-control" id="tb-answer3" placeholder="Answer trhee">
         </div>
         <div class="col-10 offset-1">
-            <input type="text" name="correct_answer" class="form-control" placeholder="Correct answer">
+            <input type="text" name="correct_answer" class="form-control" id="tb-correct-answer" placeholder="Correct answer">
         </div>
         <div class="offset-1">
-            <button type="submit" class="btn btn-secondary" id="submit-form">Submit</button>
+            <button onClick="insertQuestion()" class="btn btn-secondary" id="submit-form">Submit</button>
         </div>   
     </div>
 </form>
+
+{{!-- <script>
+    function insertQuestion() {
+        var title = $("#tb-title").val();
+        var answer = $("#tb-answer1").val();
+        var answer = $("#tb-answer2").val();
+        var answer = $("#tb-answer3").val();
+        var correct_answer = $("#tb-correct-answer").val();
+
+        jsonRequester.post('api/questions', {
+            data: {
+                title: username,
+                answer: password,
+                correct_answer: correct_answer
+            }
+        })
+            .then(result => {
+                window.location.hash = '#/allQuestions';
+            })
+            .catch(err => {
+                console.log(err);
+            });
+    }
+</script> --}}

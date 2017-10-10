@@ -1,0 +1,56 @@
+[{
+    "userId" : "123",
+    "name" : "Plamen Todorov",
+    "isTrue" : [ 
+        false, 
+        true, 
+        true
+    ],
+    "answers" : [ 
+        "We can deactivate alarms with it.", 
+        "They should monitor the stores for irregularity, to help the customers and to respond in case of problematic customers.", 
+        "Fitting room control, Store coverage and entrance control, Communication among team members, Internal Procedures."
+    ]
+},
+{
+    "userId" : "345",
+    "name" : "Ivan Ivan",
+    "isTrue" : [ 
+        false, 
+        false, 
+        true
+    ],
+    "answers" : [ 
+        "We can deactivate alarms with it.", 
+        "The whole stock divided by the missing units", 
+        "Yes."
+    ]
+},
+{
+    "userId" : "980",
+    "name" : "Stoyan Petrov",
+    "isTrue" : [ 
+        false, 
+        true, 
+        true
+    ],
+    "answers" : [ 
+        "We must call the security guard to stop them.", 
+        "All of them are correct.", 
+        "When we are leaving the store to go on break or our shift is finished"
+    ]
+},
+{
+    "userId" : "276",
+    "name" : "Monica Hristova",
+    "isTrue" : [ 
+        true, 
+        false, 
+        true
+    ],
+    "answers" : [ 
+        "Fitting room control, Store coverage and entrance control, Communication among team members, Internal Procedures.", 
+        "The whole stock divided by the missing units", 
+        "They should monitor the stores for irregularity, to help the customers and to respond in case of problematic customers."
+    ]
+}]

@@ -5,13 +5,12 @@ module.exports = (data) => {
     const router = new Router();
     const controller = require('./controller').init(data);
 
-    router.post('/login', 
-        passport.authenticate('local', {
-         successRedirect: '/#/profile',
-         failureRedirect: '/login',
-         failureFlash: true,
-        })
-    );
+    router.post('/login', passport.authenticate('local'),
+        (req, res)=>{
+            res.status(200);
+            return res.send(req.user);
+
+        });
     
     router.get('/logout', (req, res) => {
         req.logout();

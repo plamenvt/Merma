@@ -1,0 +1,72 @@
+[{
+    "title" : "When we have to show the content of our personal belongings?",
+    "answer" : [ 
+        "When we are leaving the store to go on break or our shift is finished", 
+        "The managers are not obligated to show their belongings", 
+        "When our shift is over. When we are going on break is not necessary to do it because we will get back in the store"
+    ],
+    "correct_answer" : "When we are leaving the store to go on break or our shift is finished"
+},
+{
+    "title" : "How the shrinkage is determined?",
+    "answer" : [ 
+        "The existing relationship between the value of missing items and net sales", 
+        "The existing relationship between the total stock and the value of missing items", 
+        "The whole stock divided by the missing units"
+    ],
+    "correct_answer" : "The existing relationship between the value of missing items and net sales"
+},
+{
+    "title" : "What are the responsibilities of the security guards?",
+    "answer" : [ 
+        "They should monitor the stores for irregularity, to help the customers and to respond in case of problematic customers.", 
+        "They must stop the person causing the activation of the alarms on the entrance.", 
+        "They are the persons preventing stock losses in the store."
+    ],
+    "correct_answer" : "They should monitor the stores for irregularity, to help the customers and to respond in case of problematic customers."
+},
+{
+    "title" : "Which are the 4 basic factors of shrinkage?",
+    "answer" : [ 
+        "Fitting room control, Store coverage and entrance control, Communication among team members, Internal Procedures.", 
+        "Fast distribution, Communication among team members, Fitting room control, Doing the 25 replenishment on time.", 
+        "Store coverage and entrance control, Proper coordination, Fast distribution, Internal Procedures."
+    ],
+    "correct_answer" : "Fitting room control, Store coverage and entrance control, Communication among team members, Internal Procedures."
+},
+{
+    "title" : "When the pedestals on the entrance or the device on the wall can be activated?",
+    "answer" : [ 
+        "When there are alarm introduced between them.", 
+        "When there is foiled bag or someone try to jam the signal from the antenas.", 
+        "All of them are correct."
+    ],
+    "correct_answer" : "All of them are correct."
+},
+{
+    "title" : "When the pedestals on the entrance turn off:",
+    "answer" : [ 
+        "We must call the security guard to stop them.", 
+        "A staff member must stop the person and check their luggage.", 
+        "We do not do anything, because we have security on the entrance."
+    ],
+    "correct_answer" : "A staff member must stop the person and check their luggage."
+},
+{
+    "title" : "What is the purpose for the double-checker on the fitting?",
+    "answer" : [ 
+        "We can deactivate alarms with it.", 
+        "We use it to check if the clothes have alarm.", 
+        "We use it to check the belongings of the customers on the way in and out."
+    ],
+    "correct_answer" : "We use it to check the belongings of the customers on the way in and out."
+},
+{
+    "title" : "Do you know the shrinkage percentage from last inventory?",
+    "answer" : [ 
+        "No.", 
+        "Yes.", 
+        "No, nobody informed me."
+    ],
+    "correct_answer" : "Yes."
+}]

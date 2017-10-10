@@ -15,10 +15,12 @@ html
         div.navbar-collapse
           a.navbar-brand(href="/")
             |Merma
-          a.btn.btn-sm.btn-secondary#btn-log-out(href="api/logout")
-            |Log out  
-          a.btn.btn-sm.btn-secondary(href="#/profile")
-            |Profile  
+          a.btn.btn-sm.btn-secondary#btn-log-out
+            |Log out 
+          a.btn.btn-sm.btn-secondary#btn-log-in(href="#/login")
+            |Log in  
+          a.btn.btn-sm.btn-secondary#btn-profile(href="#/profile")
+            |Profile
       #content
       div.footer.fixed-bottom
         |Powered by Plamen Todorov
@@ -28,6 +30,7 @@ html
 
     script(src='/public/javascripts/templates.js')
     script(src='/public/javascripts/json-requester.js')
+    script(src='/public/javascripts/common.js')
 
     script(src='/public/controllers/homeController.js') 
     script(src='/public/controllers/loginController.js')  
