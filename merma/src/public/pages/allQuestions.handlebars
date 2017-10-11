@@ -17,7 +17,7 @@
     </tbody>
     {{/each}}
 </table>
-<form class="form-group" method="POST" action="api/questions" id="addQuestionsForm">
+<form class="form-group" data-toggle="validator" method="POST" action="api/questions" id="addQuestionsForm">
     <div class="form-group" id="user-info">
         <h3>Please, fill title and three answers:</h3>
         <div class="col-10 offset-1"> 
@@ -40,27 +40,3 @@
         </div>   
     </div>
 </form>
-
-{{!-- <script>
-    function insertQuestion() {
-        var title = $("#tb-title").val();
-        var answer = $("#tb-answer1").val();
-        var answer = $("#tb-answer2").val();
-        var answer = $("#tb-answer3").val();
-        var correct_answer = $("#tb-correct-answer").val();
-
-        jsonRequester.post('api/questions', {
-            data: {
-                title: username,
-                answer: password,
-                correct_answer: correct_answer
-            }
-        })
-            .then(result => {
-                window.location.hash = '#/allQuestions';
-            })
-            .catch(err => {
-                console.log(err);
-            });
-    }
-</script> --}}

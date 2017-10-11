@@ -1,37 +1,15 @@
 <h2 class="title">Profile</h2>
-<form class="form-group" method="POST" id="container-sign-in">
+<form class="form-group" data-toggle="validator" method="POST" id="container-sign-in" novalidate="true">
     <h3>Log in</h3>
     <div class="col-4 offset-4">
-        <input type="text" name="username" class="form-control" placeholder="user" id="tb-username">
+        <input type="text" name="username" class="form-control" placeholder="user" id="tb-username" required autofocus>
+        <div class="help-block with-errors"></div>
     </div>
     <div class="col-4 offset-4">
-        <input type="password" name="password" class="form-control" placeholder="password" id="tb-password">
+        <input type="password" name="password" class="form-control" placeholder="password" id="tb-password" data-minlength="6" data-minlength-error="Minimum of 6 characters" required>
     </div>
     <div>
         <input onClick="login()" class="btn btn-secondary col-2 offset-5" value="Log in" id="#btn-sign-in">
     </div>
 </form>
-
-{{!-- <script>
-    function login() {
-        var username = $("#tb-username").val();
-        var password = $("#tb-password").val();
-
-        jsonRequester.post("api/login", {
-            data: {
-                username: username,
-                password: password
-            }
-        })
-            .then(result => {
-                user = result;
-                localStorage.setItem('user', user);
-                window.location.hash = '#/profile';
-                console.log(result);
-            })
-            .catch(err => {
-                console.log(err);
-            });
-    }
-</script> --}}
 
