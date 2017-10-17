@@ -1,39 +1,54 @@
-<h2 class="title">Shrinkage Evaluation</h2>
-{{#if user}}
-<h2 class="title">User</h2>
-{{/if}}
-<form class="form-group" data-toggle="validator" method="POST" action="api/responses">
-    <div class="form-group" id="user-info">
-        <h3>Please, fill your ID and name:</h3>
-        <div class="col-4 offset-4"> 
-            <input type="text" name="id" class="form-control" placeholder="ID">
-        </div>
-        <div class="col-6 offset-3">
-            <input type="text" name="name" class="form-control" placeholder="First and last name">
-        </div>
-        <div>
-            <span class="btn btn-secondary col-2 offset-5" id="next-section">Next</span>
-        </div>      
+{{!-- Top buttons START --}}
+<div class="call-to-action-row d-flex justify-content-center">
+  <a href="#" class="call-to-action-button ml-2 mr-2">View The Demo</a>
+  <a href="#" class="call-to-action-button  ml-2 mr-2">Sign Up Today!</a>
+</div>
+{{!-- Top buttons END --}} {{!-- Columns START --}}
+<div class="row mb-5 mt-5">
+  {{#each this}}
+  <div class="col col-left">
+    <h8 class="text-color-dark-blue-green">{{title}}</h8 class="text-color-dark-blue-green">
+    <div>
+      <img src="/public/images/posts/{{id}}.jpg" alt="post image" class="w-25 float-left ml-0 mr-2 mb-2 mt-2 border-gray-bottom-1">
+      <p class="small column">
+        {{post}}
+      </p>
+      <button class="button-1 d-inline p-1 mr-4 button-read-more">Read more</button>
     </div>
-    <div class="form-group" id="questions">
-        {{#each this}}
-        <div>
-        <label for="{{title}}" class="col-10 offset-1">{{title}}</label>
-        </div>
-        <div>
-        <select class="form-control col-10 offset-1" name="answers">
-            <option selected>Choose...</option>
-            {{#each answer}}
-            <option>{{this}}</option>
-            {{/each}}
-        </select>
-        <select name="correct_answers" class="hidden">
-            <option selected>{{correct_answer}}</option>
-        </select>    
-        </div>
-        {{/each}} 
-        <div class="offset-1">
-            <button onClick="insertResponse()" class="btn btn-secondary" id="submit-form">Submit</button>
-        </div>
+  </div>
+  {{/each}}
+</div>
+
+{{!-- Columns END --}} {{!-- Media bar START --}}
+
+<div class="media-container">
+  <div class="row">
+    <div class="col mt-3 mb-3">
+      <img src="public/images/bubble-placeholder.png" alt="placeholder">
     </div>
-</form>
+    <div class="col mt-3 mb-3">
+      <img src="public/images/bubble-placeholder-search.png" alt="placeholder">
+    </div>
+    <div class="col mt-3 mb-3">
+      <img src="public/images/bubble-placeholder.png" alt="placeholder">
+    </div>
+    <div class="col mt-3 mb-3">
+      <img src="public/images/bubble-placeholder-search.png" alt="placeholder">
+    </div>
+    <div class="col mt-3 mb-3">
+      <img src="public/images/bubble-placeholder.png" alt="placeholder">
+    </div>
+  </div>
+</div>
+{{!-- Media bar END --}}
+{{!-- Bottom buble START --}}
+<div class="bubble text-secondary text-center p-4">
+
+    <h2 class="text-color-dark-blue-green" class="d-inline p-4"> If you listen to chalga and drink rakia - this is your place.
+        <span>
+    <button class="button-1 d-inline p-1 ml-4 mr-4">Read more</button>
+
+        </span>
+    </h2>
+</div>
+{{!-- Bottom buble END --}}

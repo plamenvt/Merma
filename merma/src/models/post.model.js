@@ -1,4 +1,4 @@
-class Question {
+class Post {
     static isValid(model) {
         return typeof model !== 'undefined';
     }
@@ -12,7 +12,7 @@ class Question {
     }
 
     static toViewModel(model) {
-        const viewModel = new Question();
+        const viewModel = new Post();
 
         Object.keys(model)
             .forEach((prop) => {
@@ -23,4 +23,4 @@ class Question {
     }
 }
 
-module.exports = Question;
+module.exports = Post;

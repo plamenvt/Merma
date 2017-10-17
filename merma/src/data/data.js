@@ -1,7 +1,7 @@
 const seedUsers = require('../../db/users.json');
-const seedQuestions = require('../../db/questions.json');
+const seedPosts = require('../../db/posts.json');
 const seedResponses = require('../../db/responses.json');
-const QuestionsData = require('./questions.data');
+const PostsData = require('./posts.data');
 const UsersData = require('./users.data');
 const ResponsesData = require('./responses.data');
 
@@ -10,9 +10,9 @@ const init = async (db) => {
     if (await collectionUsers.count() === 0) {
         collectionUsers.insert(seedUsers);
     }
-    const collectionQuestions = db.collection('questions');
-    if (await collectionQuestions.count() === 0) {
-        collectionQuestions.insert(seedQuestions);
+    const collectionPosts = db.collection('posts');
+    if (await collectionPosts.count() === 0) {
+        collectionPosts.insert(seedPosts);
     }
     const collectionResponses = db.collection('responses');
     if (await collectionResponses.count() === 0) {
@@ -21,7 +21,7 @@ const init = async (db) => {
 
     return Promise.resolve({
         users: new UsersData(db),
-        questions: new QuestionsData(db),
+        posts: new PostsData(db),
         responses: new ResponsesData(db),
     });
 };

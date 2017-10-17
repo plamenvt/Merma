@@ -1,0 +1,83 @@
+<div class="pl-1 pb-4 pt-4 blog-navigation">
+    <a href="#/">home</a>
+    <span> &#187 </span>
+    <a href="#/{{categor}}">{{categor}}</a>
+    <span class="blog-nav-active">&#187 {{title}}</span>
+</div>
+
+<div class="row">
+    <div class="no-side-padding col-lg-8 posts-container list-unstyled">
+        <div class="post-card mb-5">
+            <h1 class="post-title mb-3">{{title}}</h1>
+            <div class="container">
+                <img class="post-image float-left" src="public/images/posts/{{id}}.jpg" alt="post-image">
+                <p>{{post}}</p>
+            </div>
+        </div>
+
+        <div class="" id="wrap-horisontal">
+            <div id="gradient-horisontal"></div>
+        </div>
+
+        {{!-- COMMENTS --}}
+        <div class="comments-container mt-4">
+            <h1 class="mb-4">number of comments</h1>
+            <ul class="comments no-side-padding list-unstyled">
+                {{#each comments}}
+                <div class="comment-bubble">
+                    <li class="media">
+                        <img class="d-flex mr-3" src="public/images/img-placeholder.png" alt="comment-author-image">
+                        <div class="media-body">
+                            <h2>{{name}}
+                                <span>| {{dateComment}}</span>
+                            </h2>
+                            <p>
+                                {{comment}}
+                            </p>
+                        </div>
+                    </li>
+                    <div class="comment-bubble-arrow"></div>
+                </div>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+
+    <div class="col-lg-1" id="wrap-vertical">
+        <div id="gradient-vertical"></div>
+    </div>
+
+    {{!-- Sidebar --}}
+    <div class="col-lg-3 sidebar-container">
+        <div>
+            <h2>Recent comments</h2>
+            <ul>
+                {{#each recentComments}}
+                <li>
+                    <a href="#/">...</a>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+        <div>
+            <h2>Archives</h2>
+            <ul>
+                {{#each archivePosts}}
+                <li>
+                    <a href="#/">...</a>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+        <div>
+            <h2>Recent posts</h2>
+            <ul>
+                {{#each recentPosts}}
+                <li>
+                    <a href="#/">...</a>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</div>

@@ -8,22 +8,135 @@ html
     script(src='/node_modules/sammy/lib/sammy.js')
     link(rel='stylesheet', href='/node_modules/bootstrap/dist/css/bootstrap.css')
     link(rel='stylesheet', href='/node_modules/bootstrap/dist/css/bootstrap-reboot.css')
+    link(rel='stylesheet', href='/public/stylesheets/font-awesome-4.7.0/css/font-awesome.min.css')
     link(rel='stylesheet', href='/public/stylesheets/style.css')
-  body
-    .container
-      nav.navbar.fixed-top
-        div.navbar-collapse
-          a.navbar-brand(href="/")
-            |Merma
-          a.btn.btn-sm.btn-secondary#btn-log-out
-            |Log out 
-          a.btn.btn-sm.btn-secondary#btn-log-in(href="#/login")
-            |Log in  
-          a.btn.btn-sm.btn-secondary#btn-profile(href="#/profile")
-            |Profile
-      #content
-      div.footer.fixed-bottom
-        |Powered by Plamen Todorov
+    link(rel='stylesheet', href='/public/stylesheets/nav.css')
+    link(rel='stylesheet', href='/public/stylesheets/carousel.css')
+  body.background-home
+    header.container-fluid.header-home
+      div.row.nav-row
+        div.col.col-md-2
+          a.home(href="#/")
+            img(src="/public/images/Logo.png", alt="logo")
+        div.slogan.col-md-3.text-secondary.font-italic
+          |The Fake news portal    
+        nav.navbar.navbar-expand-md.navbar-light.col
+          //div.navbar-toggler-wrap
+            button.navbar-toggler(type="button", data-toggle="collapse", data-target="#navbarSupportedContent", aria-controls="navbarSupportedContent",
+                        aria-expanded="false", aria-label="Toggle navigation")
+              i.navbar-custom-toggler-icon.fa.fa-bars.fa-lg(aria-hidden="true")
+          div.navbar-collapse.text-white#navbarSupportedContent
+            ul.nav#menu-bar
+              li.nav-item#nav-home
+                a.nav-link.home(href="#/")
+                  | Home
+              li.nav-item#nav-themes
+                a.nav-link(href="#/politics")   
+                  |Politics
+              li.nav-item#nav-features
+                a.nav-link(href="#")   
+                  |Sport
+              li.nav-item#nav-about
+                a.nav-link(href="#")   
+                  |World
+              li.nav-item#nav-login
+                a.nav-link(href="#/login")   
+                  |Login
+      // Categor name
+      div#category-name.standard-header-container
+        h1.standart-main-title All Categories
+        h3.standart-sub-title find all bulshits            
+      div#carousel-container
+        // Carousel START
+        #myCarousel.row.carousel.slide(data-ride='carousel')
+          .carousel-inner
+            .carousel-item.active
+              .container
+                .carousel-caption.d-md-block
+                  h1(clas='shadow-1') Being Dumb Has Never Been Easier
+                  h3.text-georgia-italic.shadow-1 “Join today and recived our daily dose of fake news.”
+            .carousel-item
+              .container
+                .carousel-caption.d-md-block
+                  h1(clas='shadow-1') Did you came here to laugh?
+                  h3.text-georgia-italic.shadow-1
+                    | If not - you are gonna cry.
+          a.carousel-control-prev(href='#myCarousel', role='button', data-slide='prev')
+            span.carousel-control-prev-icon(aria-hidden='true')
+            span.sr-only Previous
+          a.carousel-control-next(href='#myCarousel', role='button', data-slide='next')
+            .carousel-control-next-icon(aria-hidden='true')
+            span.sr-only Next
+        // Carousel END
+    section.container-fluid                                          
+      #content.container-fluid
+    footer.container-fluid.d-flex.flex-column
+      div.footer-container.row.mb-auto.mt-5.p-2
+        div.col.col-left
+          img.logo-footer(src="/public/images/Logo.png", alt="logo")
+          strong.small.copyright
+            |© 2017 20010 Modest Inc
+          div
+            img.float-left.p-2(src="/public/images/img-placeholder.png", alt="placeholder")
+            p.small
+              |Rhoncus quis, varius sed velit. Mauris quis nunc eu nunc molest. Rhoncus quis, varius sed velit. Mauris quis nunc eu nunc molest. Rhoncus quis, varius sed velit. Mauris quis nunc eu nunc molest.
+        div.col.col-middle
+          h2
+            |Recent posts
+          div#footer-recent
+            ul
+              li.droid.small
+                  |Rhoncus quis varius sed velit nibh molestie
+              li.droid.small
+                  |Mauris quis nunc eu nunc molestie
+              li.droid.small
+                  |Egestas et sit amet odio morbi quis nunc eu
+              li.droid.small
+                  |Lacinia velit in nibh sodales sed quis nunc 
+              li.droid.small
+                  |Pharetra sem feugiat nibh sodales sed 
+              li.droid.small
+                  |Vivamus ut cursus augue nibh sodales sed 
+        div.col.col-right
+          h2
+            |Archives
+          div#footer-archives
+            ul
+              li.droid.small
+                  |Rhoncus quis varius sed velit nibh molestie
+              li.droid.small
+                  |Mauris quis nunc eu nunc molestie
+              li.droid.small
+                  |Egestas et sit amet odio morbi quis nunc eu
+              li.droid.small
+                  |Lacinia velit in nibh sodales sed quis nunc 
+              li.droid.small
+                  |Pharetra sem feugiat nibh sodales sed 
+              li.droid.small
+                  |Vivamus ut cursus augue nibh sodales sed              
+      div.row.p-2.footer-bottom
+        ul.col.nav.justify-content-start.small
+          li.nav-item
+            a.nav-link(href="#")
+              |Home
+          li.nav-item
+            a.nav-link(href="#")
+              |About us
+          li.nav-item
+            a.nav-link(href="#")
+              |Contact us
+          li.nav-item
+            a.nav-link(href="#")
+              |Social
+        div.col.text-right.align-middle
+          p
+            |Designes by 
+            span
+              | Plamen Todorov
+            | |Powered by   
+            span 
+              |Telerik Academy 
+
     
     script(src='/node_modules/handlebars/dist/handlebars.js')
     script(src='/public/app.js')
@@ -35,6 +148,5 @@ html
     script(src='/public/controllers/homeController.js') 
     script(src='/public/controllers/loginController.js')  
     script(src='/public/controllers/profileController.js') 
-    script(src='/public/controllers/allResponsesController.js')  
-    script(src='/public/controllers/allQuestionsController.js') 
+    script(src='/public/controllers/politicsCategoryController.js')  
     script(src='/public/controllers/usersController.js') 

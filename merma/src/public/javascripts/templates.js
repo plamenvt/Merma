@@ -1,7 +1,7 @@
 const templates = function() {
     var handlebars = window.handlebars || window.Handlebars,
       Handlebars = window.handlebars || window.Handlebars,
-      cache = {};
+      cache = {}; 
   
     function get(name) {
       var promise = new Promise(function(resolve, reject) {

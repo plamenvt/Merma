@@ -1,14 +1,14 @@
 const init = (data) => {
     const controller = {
-        getAllQuestions(req, res) {
-            data.questions.getAll().then((result)=>{
+        getAllPosts(req, res) {
+            data.posts.getAll().then((result)=>{
                 res.status(200);
                 return res.json(result);
             });
         },
-        addQuestion(req, res) {
-            const question = req.body;
-            data.questions.create({
+        addPost(req, res) {
+            const post = req.body;
+            data.posts.create({
                 title: req.body.title,
                 answer: req.body.answer,
                 correct_answer: req.body.correct_answer,
@@ -17,7 +17,7 @@ const init = (data) => {
                 .catch(function(err) {
                     throw err;
                 });
-                res.redirect('/#/allQuestions');
+                res.redirect('/#/allPosts');
         },
     };
 

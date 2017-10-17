@@ -5,8 +5,8 @@ module.exports = (data) => {
     const controller = require('./controller').init(data);
 
     router
-    .get('/', controller.getAllQuestions)
-    .post('/', controller.addQuestion);
+    .get('/', controller.getAllPosts)
+    .post('/', controller.addPost);
 
     return router;
 };

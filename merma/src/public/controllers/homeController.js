@@ -1,49 +1,39 @@
 const homeController = function() {
     
     function all(context) {
-        var questions;
-        jsonRequester.get('api/questions')
-        .then(function(resQuestions) {
+        var posts;
+        var post;
+        jsonRequester.get('api/posts')
+        .then(function(resPosts) {
+            posts = resPosts.slice(0,3);
             
-            function shuffle(questions) {
-                for (var i = 0; i < questions.length - 1; i++) {
-                    var j = i + Math.floor(Math.random() * (questions.length - i));
-            
-                    var temp = questions[j];
-                    questions[j] = questions[i];
-                    questions[i] = temp;
+            function trim(posts) {
+                for (var i = 0; i < posts.length; i++) {
+                    var originalPost = posts[i].post;
+                    posts[i].post = originalPost.slice(0, 200);
                 }
-                return questions;
+                return posts;
             }
-                        
-            var shuffledQuestionArray = shuffle(resQuestions);
-            questions = shuffledQuestionArray.slice(0,3);
-
+            posts = trim(posts);
             return templates.get('home');
           })
           .then(function(template) {
-            context.$element().html(template(questions));
+            context.$element().html(template(posts));
           })
-          .then(function(questions) {
-            $('#next-section').on('click', function() {
-                $('#questions').show();
-                $('#user-info').addClass('hidden');
-            });
+          .then(() => {
+            $('#category-name').addClass('hidden');
+            const body = $('body').removeClass('background-standard');
+            body.addClass('background-home');
+            const header = $('header').removeClass('header-standard');
+            header.addClass('header-home');
+            $('#carousel-container').removeClass('hidden');
           })
           .catch(function(err) {
             console.log(err);
           });
     }
-
-    function response(context) {
-        templates.get('thanks')
-        .then(function(template) {
-            context.$element().html(template());
-        });
-    }
     
     return {
         all: all,
-        response: response
     };
 }();
