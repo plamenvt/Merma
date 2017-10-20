@@ -154,12 +154,14 @@ section{
     color: #758b8d;
 }
 .sidebar-container ul{
-    padding-left: 25px;
+    padding-left: 15px;
 
 }
 
 .sidebar-container li{
     line-height: 30px;
+    list-style-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAIElEQVQYV2Nct/fi/yBnfUYGJADmoEvAVSBLYFeJzUwAbHwUBr3oeW4AAAAASUVORK5CYII=");
+    font-size: 12px;
 }
 .sidebar-container li a{
    text-decoration: none;
@@ -358,12 +360,6 @@ p {
     bottom: -20px;
     left: 45%;
 }
-
-
-  
-
-
-
 .button:hover {
     background: #d6d6d6;
     text-decoration: none;
@@ -513,6 +509,9 @@ p {
 .comment-bubble{
     margin: 0px 30px 0px 0px;    
 }
+.comment-bubble-replay{
+    margin: 0px 0px 0px 90px;    
+}
 .media h2 {
     color:#565656;
 }
@@ -549,7 +548,7 @@ p {
         height: 280px !important;
     }
     .sidebar-container{
-        left: -50px;
+        left: -30px;
     }
     .logo{
         height: auto;

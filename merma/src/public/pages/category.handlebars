@@ -1,6 +1,6 @@
 <div class="pl-1 pb-4 pt-4 blog-navigation">
     <a href="#/">Home</a>
-    <span class="blog-nav-active">&#187 Politics</span>
+    <span class="blog-nav-active">&#187 {{this.0.categor}}</span>
 </div>
 
 <div class="row">
@@ -43,9 +43,9 @@
         <div>
             <h2>Recent comments</h2>
             <ul>
-                {{#each recentComments}}
+                {{#each this}}
                 <li>
-                    <a href="#!blog/{{this.categoryHref}}/{{this.postHref}}">{{stringTrim this.text 25}}...</a>
+                    <a href="#/{{categor}}/{{id}}">{{title}}</a>
                 </li>
                 {{/each}}
             </ul>
@@ -53,9 +53,9 @@
         <div>
             <h2>Archives</h2>
             <ul>
-                {{#each archivePosts}}
+                {{#each this}}
                 <li>
-                    <a href="#!blog/{{this.categoryHref}}/{{this.href}}">{{stringTrim this.title 25}}...</a>
+                    <a href="#/{{categor}}/{{id}}">{{title}}</a>
                 </li>
                 {{/each}}
             </ul>
@@ -63,9 +63,9 @@
         <div>
             <h2>Recent posts</h2>
             <ul>
-                {{#each recentPosts}}
+                {{#each this}}
                 <li>
-                    <a href="#!blog/{{this.categoryHref}}/{{this.href}}">{{stringTrim this.title 25}}...</a>
+                    <a href="#/{{categor}}/{{id}}">{{title}}</a>
                 </li>
                 {{/each}}
             </ul>

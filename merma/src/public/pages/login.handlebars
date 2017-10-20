@@ -1,15 +1,17 @@
-<h2 class="title">Profile</h2>
-<form class="form-group" data-toggle="validator" method="POST" id="container-sign-in" novalidate="true">
-    <h3>Log in</h3>
-    <div class="col-4 offset-4">
-        <input type="text" name="username" class="form-control" placeholder="user" id="tb-username" required autofocus>
-        <div class="help-block with-errors"></div>
+<div id="login-form">
+    <div class="form-group">
+        <h2 class="panel-heading">Log in</h2>
+        <input type="username" id="input-username" class="form-control chat-input" placeholder="username" />
+        </br>
+        <input type="password" id="input-password" class="form-control chat-input" placeholder="password" />
+        </br>
+        <div class="wrapper">
+            <span class="group-btn">
+                <a id="login" class="btn btn-secondary col-2 offset-5">Log in
+                    <span class="fa glyphicon glyphicon-log-in"></span>
+                </a>
+            </span>
+        </div>
+        </br>
     </div>
-    <div class="col-4 offset-4">
-        <input type="password" name="password" class="form-control" placeholder="password" id="tb-password" data-minlength="6" data-minlength-error="Minimum of 6 characters" required>
-    </div>
-    <div>
-        <input onClick="login()" class="btn btn-secondary col-2 offset-5" value="Log in" id="#btn-sign-in">
-    </div>
-</form>
-
+</div>

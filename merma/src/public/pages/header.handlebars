@@ -1,0 +1,54 @@
+  <div class="row nav-row">
+    <div class="col col-md-2"><a class="home" href="#/"><img src="/public/images/Logo.png" alt="logo"/></a></div>
+    <div class="slogan col-md-3 text-secondary font-italic">The Fake news portal    </div>
+    <nav class="navbar navbar-expand-md navbar-light col">
+      <!--div.navbar-toggler-wrap
+      button.navbar-toggler(type="button", data-toggle="collapse", data-target="#navbarSupportedContent", aria-controls="navbarSupportedContent",
+                  aria-expanded="false", aria-label="Toggle navigation")
+        i.navbar-custom-toggler-icon.fa.fa-bars.fa-lg(aria-hidden="true")
+      -->
+      <div class="navbar-collapse text-white" id="navbarSupportedContent">
+        <ul class="nav" id="menu-bar">
+          <li class="nav-item" id="nav-home"><a class="nav-link home" href="#/">Home</a></li>
+          <li class="nav-item" id="nav-themes"><a class="nav-link" href="#/politics">
+                Politics</a></li>
+          <li class="nav-item" id="nav-features"><a class="nav-link" href="#/sport">
+                Sport</a></li>
+          <li class="nav-item" id="nav-about"><a class="nav-link" href="#/world">
+                World</a></li>
+          <li class="nav-item" id="nav-login"><a class="nav-link" href="#/login">
+                Login</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <!-- Categor name-->
+  <div class="standard-header-container hidden" id="category-name">
+    <h1 class="standart-main-title">{{this.0.categor}}</h1>
+    <h3 class="standart-sub-title">Find all the bulshits for {{this.0.categor}}</h3>
+  </div>
+  <div id="carousel-container" class="hidden">
+    <!-- Carousel START-->
+    <div class="row carousel slide" id="myCarousel" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="container">
+            <div class="carousel-caption d-md-block">
+              <h1 clas="shadow-1">Being Dumb Has Never Been Easier</h1>
+              <h3 class="text-georgia-italic shadow-1">“Join today and recived our daily dose of fake news.”</h3>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="container">
+            <div class="carousel-caption d-md-block">
+              <h1 clas="shadow-1">Did you came here to laugh?</h1>
+              <h3 class="text-georgia-italic shadow-1">If not - you are gonna cry.</h3>
+            </div>
+          </div>
+        </div>
+      </div><a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+        <div class="carousel-control-next-icon" aria-hidden="true"></div><span class="sr-only">Next</span></a>
+    </div>
+    <!-- Carousel END-->
+  </div>

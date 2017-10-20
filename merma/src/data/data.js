@@ -14,15 +14,10 @@ const init = async (db) => {
     if (await collectionPosts.count() === 0) {
         collectionPosts.insert(seedPosts);
     }
-    const collectionResponses = db.collection('responses');
-    if (await collectionResponses.count() === 0) {
-        collectionResponses.insert(seedResponses);
-    }
 
     return Promise.resolve({
         users: new UsersData(db),
         posts: new PostsData(db),
-        responses: new ResponsesData(db),
     });
 };
 

@@ -8,9 +8,6 @@
         {
             "name" : "Ivan Goshov",
             "comment" : "Fack, this sounds legic",
-            "replays" : [ 
-                {}
-            ],
             "dateComment" : "2017-10-15T08:03:54.431Z"
         }
     ],
@@ -26,9 +23,6 @@
         {
             "name" : "Krisko Beats",
             "comment" : "The science gone too far.",
-            "replays" : [ 
-                {}
-            ],
             "dateComment" : "2017-10-15T08:04:56.639Z"
         }
     ],
@@ -44,11 +38,62 @@
         {
             "name" : "Doncho",
             "comment" : "What the heck I am reading.",
-            "replays" : [ 
-                {}
-            ],
             "dateComment" : "2017-10-15T08:05:19.572Z"
         }
     ],
     "date" : "2017-10-15T08:05:19.572Z"
+},
+{
+    "id" : "4",
+    "categor" : "sport",
+    "title" : "Mayweather v McGregor was conspiracy",
+    "author" : "Penka Chestnata",
+    "post" : "Over time, the words \"opium of the people\", Karl Marx's oft-recycled line about organised religion, have become wrenched from their original context. \"Religion,\" he wrote, \"is the sigh of the oppressed creature, the heart of a heartless world, the soul of soulless conditions.\" It is hard not to view this weekend's gaudy stage show with Floyd Mayweather and Conor McGregor in much the same fashion. If nothing else, their confected nonsense is the ultimate distraction for a distracted society, a cash-grab for a materialistic age, a deep groan of all of us who know we should ignore it but who will still reach for the remote regardless.",
+    "comments" : [ 
+        {
+            "name" : "Spas",
+            "comment" : "It was a good love story.",
+            "replays" : [ 
+                {
+                    "name" : "Spas",
+                    "comment" : "Yes it was.",
+                    "dateComment" : "2017-10-19T18:39:43.019Z"
+                }
+            ],
+            "dateComment" : "2017-10-19T18:39:43.030Z"
+        }, 
+        {
+            "name" : "Gucci",
+            "comment" : "Davai Kobra.",
+            "dateComment" : "2017-10-19T18:39:43.030Z"
+        }
+    ],
+    "date" : "2017-10-19T18:39:43.030Z"
+},
+{
+    "id" : "5",
+    "categor" : "world",
+    "title" : "Online Porn Leads to Mass Shootings",
+    "author" : "Michael Houltt",
+    "post" : "Evangelical Christian Franklin Graham has blamed mass shootings in America, on online pornography of all things. “Pornography has become so widespread nowadays, you can access it on your phone, and society does nothing about it,” said Graham in an interview with World Net Daily. “Once you allow obscenities like porn, anything is possible, even mass shootings.” In the aftermath of the Las Vegas shooting, carried out by gun enthusiast Stephen Paddock, Republicans have twisted themselves into knots avoiding blaming the massacre on access to high-powered weaponry. After the American College of Physicians said that gun violence was a public health issue, NRA spokesperson Dana Loesch said there were plenty of other dangerous items such as cigarettes and feet.",
+    "comments" : [ 
+        {
+            "name" : "Dana Loesch",
+            "comment" : "Right after we ban pools, cars, cigarettes, alcohol, hands feet & fists. Lives lost due to these constitute an epidemic.",
+            "replays" : [ 
+                {
+                    "name" : "Spas",
+                    "comment" : "Yes it was.",
+                    "dateComment" : "2017-10-19T18:54:45.839Z"
+                }
+            ],
+            "dateComment" : "2017-10-19T18:54:45.839Z"
+        }, 
+        {
+            "name" : "Ponylover69",
+            "comment" : "My free porn for everyone.",
+            "dateComment" : "2017-10-19T18:54:45.839Z"
+        }
+    ],
+    "date" : "2017-10-19T18:54:45.839Z"
 }]

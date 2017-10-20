@@ -21,7 +21,7 @@
 
         {{!-- COMMENTS --}}
         <div class="comments-container mt-4">
-            <h1 class="mb-4">number of comments</h1>
+            <h1 class="mb-4">{{comments.length}} Comments</h1>
             <ul class="comments no-side-padding list-unstyled">
                 {{#each comments}}
                 <div class="comment-bubble">
@@ -37,6 +37,22 @@
                         </div>
                     </li>
                     <div class="comment-bubble-arrow"></div>
+                        {{#each replays}}
+                        <div class="comment-bubble-replay">
+                            <li class="media">
+                                <img class="d-flex mr-3" src="public/images/img-placeholder.png" alt="comment-author-image">
+                                <div class="media-body">
+                                    <h2>{{name}}
+                                        <span>| {{dateComment}}</span>
+                                    </h2>
+                                    <p>
+                                        {{comment}}
+                                    </p>
+                                </div>
+                            </li>
+                            <div class="comment-bubble-arrow"></div>
+                        </div>
+                        {{/each}}
                 </div>
                 {{/each}}
             </ul>
@@ -52,31 +68,25 @@
         <div>
             <h2>Recent comments</h2>
             <ul>
-                {{#each recentComments}}
                 <li>
-                    <a href="#/">...</a>
+                    <a href="#/{{categor}}/{{id}}">{{title}}</a>
                 </li>
-                {{/each}}
             </ul>
         </div>
         <div>
             <h2>Archives</h2>
             <ul>
-                {{#each archivePosts}}
                 <li>
-                    <a href="#/">...</a>
+                    <a href="#/{{categor}}/{{id}}">{{title}}</a>
                 </li>
-                {{/each}}
             </ul>
         </div>
         <div>
             <h2>Recent posts</h2>
             <ul>
-                {{#each recentPosts}}
                 <li>
-                    <a href="#/">...</a>
+                    <a href="#/{{categor}}/{{id}}">{{title}}</a>
                 </li>
-                {{/each}}
             </ul>
         </div>
     </div>

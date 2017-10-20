@@ -1,18 +1,17 @@
-const politicsCategoryController = function() {
+const sportCategoryController = function() {
     
     function all(context) {
-        var politics;
+        var sport;
         jsonRequester.get('api/posts')
-        .then(function(resPolitics) {
-            politics = resPolitics.filter(function (el) {
-              return el.categor === 'politics';
+        .then(function(resSport) {
+          sport = resSport.filter(function (el) {
+              return el.categor === 'sport';
             });
-            politics = helper.trim(politics, 250);
-            helper.setHeader(politics);
+            helper.setHeader(sport);
             return templates.get('category');
           })
           .then(function(template) {
-            context.$element().html(template(politics));
+            context.$element().html(template(sport));
           })
           .catch(function(err) {
             console.log(err);
@@ -20,15 +19,15 @@ const politicsCategoryController = function() {
     }
 
     function getById(context) {        
-        var politic;
+        var sport;
         jsonRequester.get('api/posts')
-        .then(function(resPolitics) {
-            var politicsId = parseInt(context.params.id);
-            politic = resPolitics[politicsId-1];
+        .then(function(resSport) {
+            var sportId = parseInt(context.params.id);
+            sport = resSport[sportId-1];
             return templates.get('post');
           })
           .then(function(template) {
-            context.$element().html(template(politic));
+            context.$element().html(template(sport));
           })
           .then(() => {
             const body = $('body').removeClass('background-home');

@@ -1,18 +1,17 @@
-const politicsCategoryController = function() {
+const worldCategoryController = function() {
     
     function all(context) {
-        var politics;
+        var world;
         jsonRequester.get('api/posts')
-        .then(function(resPolitics) {
-            politics = resPolitics.filter(function (el) {
-              return el.categor === 'politics';
+        .then(function(resWorld) {
+          world = resWorld.filter(function (el) {
+              return el.categor === 'world';
             });
-            politics = helper.trim(politics, 250);
-            helper.setHeader(politics);
+            helper.setHeader(world);
             return templates.get('category');
           })
           .then(function(template) {
-            context.$element().html(template(politics));
+            context.$element().html(template(world));
           })
           .catch(function(err) {
             console.log(err);
@@ -20,15 +19,15 @@ const politicsCategoryController = function() {
     }
 
     function getById(context) {        
-        var politic;
+        var world;
         jsonRequester.get('api/posts')
-        .then(function(resPolitics) {
-            var politicsId = parseInt(context.params.id);
-            politic = resPolitics[politicsId-1];
+        .then(function(resWorld) {
+            var worldId = parseInt(context.params.id);
+            world = resWorld[worldId-1];
             return templates.get('post');
           })
           .then(function(template) {
-            context.$element().html(template(politic));
+            context.$element().html(template(world));
           })
           .then(() => {
             const body = $('body').removeClass('background-home');

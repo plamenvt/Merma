@@ -7,20 +7,18 @@
 <div class="row mb-5 mt-5">
   {{#each this}}
   <div class="col col-left">
-    <h8 class="text-color-dark-blue-green">{{title}}</h8 class="text-color-dark-blue-green">
+    <h8 class="text-color-dark-blue-green">{{title}}...</h8 class="text-color-dark-blue-green">
     <div>
       <img src="/public/images/posts/{{id}}.jpg" alt="post image" class="w-25 float-left ml-0 mr-2 mb-2 mt-2 border-gray-bottom-1">
       <p class="small column">
-        {{post}}
+        {{post}}...
       </p>
-      <button class="button-1 d-inline p-1 mr-4 button-read-more">Read more</button>
+      <a class="button-1 p-1 mr-4 button-read-more" href="#/{{categor}}/{{id}}">Read more</a>
     </div>
   </div>
   {{/each}}
 </div>
-
 {{!-- Columns END --}} {{!-- Media bar START --}}
-
 <div class="media-container">
   <div class="row">
     <div class="col mt-3 mb-3">
@@ -43,11 +41,9 @@
 {{!-- Media bar END --}}
 {{!-- Bottom buble START --}}
 <div class="bubble text-secondary text-center p-4">
-
     <h2 class="text-color-dark-blue-green" class="d-inline p-4"> If you listen to chalga and drink rakia - this is your place.
         <span>
-    <button class="button-1 d-inline p-1 ml-4 mr-4">Read more</button>
-
+          <button class="button-1 d-inline p-1 ml-4 mr-4">Read more</button>
         </span>
     </h2>
 </div>
