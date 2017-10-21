@@ -1,1 +1,23 @@
-<h2 class="title">Profile {{user.username}}</h2>
+<form class="form-group" id="addPostForm">
+    <div class="form-group" id="user-info">
+        <h3>Please, fill form for new post:</h3>
+        <div class="col-10 offset-1">
+            <input type="text" name="id" class="form-control" id="tb-id" placeholder="Id">
+        </div>
+        <div class="col-10 offset-1">
+            <input type="text" name="categor" class="form-control" id="tb-categor" placeholder="Categor">
+        </div>
+        <div class="col-10 offset-1"> 
+            <input type="text" name="title" class="form-control" id="tb-tatle" placeholder="Title">
+        </div>
+        <div class="col-10 offset-1">
+            <input type="text" name="author" class="form-control" id="tb-author" placeholder="Author">
+        </div>
+        <div class="col-10 offset-1">
+            <input type="text" name="post" class="form-control" id="tb-post" placeholder="Post text">
+        </div>
+        <div class="offset-1">
+            <button onClick="insertPost()" class="btn btn-secondary" id="submit-form">Submit</button>
+        </div>   
+    </div>
+</form>

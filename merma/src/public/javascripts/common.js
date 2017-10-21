@@ -21,39 +21,25 @@ function login() {
         });
 }
 
-function insertResponse() {
-    var userId = $("#id").val();
-    var name = $("#name").val();
-    var answers = $("#answers").val();
-    var corAnswersRes = $("#correct_answers").val();
+function insertPost() {
+    var id = $("#tb-id").val();
+    var categor = $("#tb-categor").val();
+    var title = $("#tb-tatle").val();
+    var author = $("#tb-author").val();
+    var post = $("#tb-post").val();
 
-    var chechedAnswers = [];
-    function correctRes(corRes, answersRes) {
-        var isTrue = [];
-        for (var i = 0; i < answersRes.length; i++) {
-            if (corRes[i] === answersRes[i]) {
-                isTrue[i] = true;
-            }
-            else
-            {
-                isTrue[i] = false;
-            }
-        }
-        return isTrue;
-    }
-    chechedAnswers = correctRes(corAnswersRes, answers);
-
-    jsonRequester.post('api/questions', {
+    jsonRequester.post('api/posts', {
         data: {
-            userId: username,
-            name: password,
-            isTrue: chechedAnswers,
-            answers: answers,
-            dateCreated: new Date()
+            id: id,
+            categor: categor,
+            title: title,
+            author: author,
+            post: post,
+            date: new Date()
         }
     })
         .then(result => {
-            window.location.hash = '#/thanks';
+            window.location.hash = '#/';
         })
         .catch(err => {
             console.log(err);

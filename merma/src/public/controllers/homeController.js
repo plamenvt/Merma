@@ -8,7 +8,7 @@ const homeController = function() {
           .then(function(resPosts) {
             posts = resPosts.slice(0,3);
             posts = helper.trim(posts, 150);
-            posts = helper.trimTitles(posts, 40);
+            posts = helper.trimTitles(posts, 25);
             helper.setHeader(posts, 'home');
             return templates.get('home');
           })

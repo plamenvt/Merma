@@ -9,15 +9,18 @@ const init = (data) => {
         addPost(req, res) {
             const post = req.body;
             data.posts.create({
+                id: req.body.id,
+                categor: req.body.categor,
                 title: req.body.title,
-                answer: req.body.answer,
-                correct_answer: req.body.correct_answer,
+                author: req.body.author,
+                post: req.body.post,
+                date: new Date(),
                 })
                 .then(res.status(200))
                 .catch(function(err) {
                     throw err;
                 });
-                res.redirect('/#/allPosts');
+                res.redirect('#/');
         },
     };
 
