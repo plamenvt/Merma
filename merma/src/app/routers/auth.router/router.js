@@ -8,6 +8,10 @@ module.exports = (data) => {
     router.post('/login', (req, res, next) => {
         return controller.login(req, res, next);
     });
+
+    router.post('/register', (req, res, next) => {
+        return controller.register(req, res, next);
+    });
     
     router.get('/logout', (req, res) => {
         req.logout();

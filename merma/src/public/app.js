@@ -33,7 +33,7 @@ $(() => {
         this.get('#/world/:id', worldCategoryController.getById);
         
         this.get('#/users', usersController.all);
-        this.get('#/register', usersController.signup);
+        this.get('#/join', joinController.all);
         this.get('#/login', loginController.all);
         this.get('#/logout', logoutController.all);
     });

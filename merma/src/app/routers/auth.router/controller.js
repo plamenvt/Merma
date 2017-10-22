@@ -33,6 +33,32 @@ const init = (data) => {
             req.logout();
             return res.sendStatus(200)
         },
+
+        async register(req, res) {
+            const username = req.body.username;
+            const password = req.body.password;
+
+            var user = await data.users.findByUsername(username);
+
+            if (user) {
+                res.status(409);
+                return res.json({
+                    message: 'Username exists!',
+                });
+            }
+
+            await data.users.create({
+                username: username,
+                password: password
+            });
+
+            user = await data.users.findByUsername(username);
+
+            res.status(200);
+            return res.json({
+                user: user
+            });
+        },
     };
 
     return controller;
