@@ -13,8 +13,7 @@ body {
 }
 .background-standard {
     background: 
-    linear-gradient(to top, #131a25,#0d131b),    
-    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAM0lEQVQoU2NkwAQNDAwMIIwMGhjRBbApAokhK8RqEkwjTCFeRSBbQQoJKoIpRPfOkPUMAMG7EwvScTT3AAAAAElFTkSuQmCC),  
+    linear-gradient(to top, #131a25,#0d131b),     
     url(../images/background-top-base.png),
     linear-gradient(to top, #131923, #2b415a);
     background-position:bottom center,top center,top center,bottom+63px center;
@@ -25,7 +24,6 @@ body {
     background: 
     url(../images/background-top-overlay.png), 
     linear-gradient(to top, #131a25,#0d131b),
-    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAM0lEQVQoU2NkwAQNDAwMIIwMGhjRBbApAokhK8RqEkwjTCFeRSBbQQoJKoIpRPfOkPUMAMG7EwvScTT3AAAAAElFTkSuQmCC), 
     linear-gradient(to top, #131923, #2b415a);
     background-position: center 445px ,bottom center, top center,top center,bottom+63px center;
     background-repeat: no-repeat,no-repeat,repeat,no-repeat,no-repeat;

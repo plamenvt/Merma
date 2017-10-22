@@ -1,15 +1,13 @@
-/* Carousel base class */
+
 .carousel {
     z-index: 2;
   }
-  /* Since positioning the image, we need to help out the caption */
   .carousel-caption {
     top: 0px;
     z-index: 10;
     bottom: 3rem;
   }
   
-  /* Declare heights because of positioning of img element */
   .carousel-item {
     height: 20rem;
   }
@@ -20,7 +18,6 @@
     min-width: 100%;
     height: 32rem;
   }
-  
   .carousel-control-next-icon {
     background-image : url("../images/next-icon.png");
     width: 23px;
@@ -36,15 +33,9 @@
     left: 5px;
   }
   
-  
-  /* Featurettes
-  ------------------------- */
-  
   .featurette-divider {
-    margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+    margin: 5rem 0; 
   }
-  
-  /* Thin out the marketing headings */
   .featurette-heading {
     font-weight: 300;
     line-height: 1;
@@ -52,15 +43,13 @@
   }
   
   
-  /* RESPONSIVE CSS
-  -------------------------------------------------- */
+  /* RESPONSIVE CSS */
   @media (min-width: 768px){
     .carousel {
       padding-top:90px;
     }
   }
   @media (min-width: 960px) {
-    /* Bump up size of carousel content */
     
     .carousel-caption p {
       margin-bottom: 1.25rem;
@@ -76,12 +65,5 @@
     }
     .carousel-item {
       height: 15rem;
-      /* background-color: #777; */
     }
   }
-  /* 
-  @media (min-width: 62em) {
-    .featurette-heading {
-      margin-top: 7rem;
-    }
-  } */

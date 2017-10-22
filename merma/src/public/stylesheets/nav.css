@@ -1,11 +1,11 @@
 .navbar-toggler-wrap {
-    top:5%;
-    position: absolute;
     left: 80%;
+    position: absolute;
+    top:5%;
   }
   .navbar-light .navbar-toggler  {
-    color: white;
     border-color: white;
+    color: white;
   }
   .navbar{
     position: absolute;
@@ -17,12 +17,11 @@
   }
   
   #menu-bar {
-    width: 100%;
-    height: 100%; 
+    border: outset 1px #000000;
+    box-shadow: 2px 2px 2px  #2E2E2E;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
-    box-shadow: 2px 2px 2px  #2E2E2E;
     -webkit-box-shadow: 2px 2px 2px  #2E2E2E;
     -moz-box-shadow: 2px 2px 2px #2E2E2E;
     background: 
@@ -31,11 +30,10 @@
     background-position: bottom center,top center;
     background-repeat: no-repeat,no-repeat;
     background-size: 100% 50%,auto;
-    width: 100%;
     height: 50%;
-    border: outset 1px #000000;
     position:relative;
     z-index:999;
+    width: 100%;
   }
   
   #menu-bar li {
@@ -44,13 +42,13 @@
     padding: auto;  
   }
   #menu-bar a {
+    color: #000000;
     display: inline; 
     font-family: 'Droid Sans', sans-serif;;
     font-style: normal;
     font-size: 12px;
-    color: #000000;
     text-decoration: none;
-    text-shadow: 0px 0px 0px #000000;
+    text-shadow: 0 0 0 #000000;
   }
   
   #menu-bar > li.nav-item.dropdown > ul > li:hover {
@@ -58,7 +56,7 @@
   }
   #menu-bar .active a, #menu-bar li:hover > a {
     color: #7D7D7D;
-    text-shadow: 0px 0px 0px #FFFFFF;
+    text-shadow: 0 0 0 #FFFFFF;
   }
   
   .nav-link{
@@ -74,7 +72,6 @@
     margin-top:50px;
   }
   
-  /* Dropdown style START */
   #menu-bar li:hover > ul {
     display: block;
   }
@@ -106,12 +103,12 @@
     padding: 0;
   }
   #menu-bar ul a {
-    padding:10px 0px 10px 15px;
     color:#424242 ;
+    font-family:arial;
     font-size:12px;
     font-style:normal;
-    font-family:arial;
     font-weight: normal;
+    padding:10px 0 10px 15px;
     text-shadow: 2px 2px 3px #FFFFFF;
   }
   
@@ -131,7 +128,6 @@
     -webkit-border-bottom-right-radius: 10px;
     -moz-border-radius-bottomright: 10px;
   }
-    /* Dropdown style END */
   
   #navbarSupportedContent{
       width: 100%;
@@ -142,13 +138,13 @@
   
   @media screen and (min-width: 960px) {
     .navbar-toggler-wrap {
-      position: absolute;
       left: 80%;
+      position: absolute;
     }
   
     .navbar{
       padding-left: 16px;
-      padding-right: 0px;
+      padding-right: 0;
       position: relative;
       top: none;
     }
@@ -156,6 +152,6 @@
       height: 40px;    
     }
     .navbar-collapse{
-      margin-top:0px;
+      margin-top:0;
     }
   }

@@ -34,8 +34,8 @@ $(() => {
         
         this.get('#/users', usersController.all);
         this.get('#/register', usersController.signup);
-        this.get('#/login', usersController.signin);
-        this.get('#/logout', usersController.logout);
+        this.get('#/login', loginController.all);
+        this.get('#/logout', logoutController.all);
     });
 
     $(function() {

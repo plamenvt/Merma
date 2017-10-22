@@ -8,6 +8,7 @@ const headerController = function() {
             })
             .then(function(template) {
               $('#header').html(template(response));
+              auth.updateNav();
               if(type == 'home') {
                 const body = $('body').removeClass('background-standard');
                 body.addClass('background-home');

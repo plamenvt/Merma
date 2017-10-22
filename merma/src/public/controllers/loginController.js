@@ -12,7 +12,7 @@ const loginController = function() {
         })
         .then(function() {
             $('#login').on('click', function() {
-                var username = $("#input-usernam").val();
+                var username = $("#input-username").val();
                 var password = $("#input-password").val();
     
                 jsonRequester.post('api/login', {
@@ -22,11 +22,9 @@ const loginController = function() {
                     }
                 })
                 .then(result => {
-                    Data.setLocalStorage(result);
-                    user = result;
-                    localStorage.setItem('user', user);
-                    window.location.hash = '#/profile';
                     console.log(result);
+                    auth.loginUser(result.user.username);
+                    window.location.hash = '#/profile';
                 })
                 .catch(error => {
                     console.log(error);
