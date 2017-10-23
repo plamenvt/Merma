@@ -14,7 +14,6 @@ function login() {
             user = result;
             localStorage.setItem('user', user);
             window.location.hash = '#/profile';
-            console.log(result);
         })
         .catch(err => {
             console.log(err);

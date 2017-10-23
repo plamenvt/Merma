@@ -30,6 +30,7 @@ const auth = function () {
 
         if (user !== null) {
             $('.nav-logout').removeClass('hidden');
+            $('.nav-profile').removeClass('hidden');
 
             $('.nav-login').addClass('hidden');
             $('.nav-join').addClass('hidden');
@@ -38,6 +39,7 @@ const auth = function () {
             $('.nav-join').removeClass('hidden');
 
             $('.nav-logout').addClass('hidden');
+            $('.nav-profile').addClass('hidden');
         }
     }
 

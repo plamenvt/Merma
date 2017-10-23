@@ -4,7 +4,6 @@ const init = (data) => {
     const controller = {
         login(req, res) {
             passport.authenticate('local', function(err, user, info) {
-                console.log('rekjjhfdf');
                 if (err) {
                     return res.sendStatus(400);
                 }
@@ -37,6 +36,13 @@ const init = (data) => {
         async register(req, res) {
             const username = req.body.username;
             const password = req.body.password;
+
+            if (!username || !password) {
+                res.status(409);
+                return res.json({
+                    message: 'Fill all info!',
+                });
+            }
 
             var user = await data.users.findByUsername(username);
 

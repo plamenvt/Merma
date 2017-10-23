@@ -8,6 +8,7 @@ const loginController = function() {
             const header = $('header').removeClass('header-home');
             header.addClass('header-standard');
             $('#carousel-container').addClass('hidden');
+            $('#category-name').addClass('hidden');
             context.$element().html(template());
         })
         .then(function() {
@@ -22,7 +23,6 @@ const loginController = function() {
                     }
                 })
                 .then(result => {
-                    console.log(result);
                     auth.loginUser(result.user.username);
                     window.location.hash = '#/profile';
                 })

@@ -1,12 +1,12 @@
 const headerController = function() {
     
     function get(response, type) {
-        var posts;
         jsonRequester.get('api/posts')
         .then(function(res) {
             return templates.get('header');
             })
             .then(function(template) {
+              var user = auth.isLoggedIn();
               $('#header').html(template(response));
               auth.updateNav();
               if(type == 'home') {
